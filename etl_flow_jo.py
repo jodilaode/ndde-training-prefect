@@ -211,6 +211,9 @@ if __name__ == "__main__":
     ).deploy(
         name="training-ndde-deployment",
         work_pool_name="training-ndde", # Managed pool (Prefect Cloud)
+        job_variables={
+            "pip_install": ["pandas", "logging","sqlalchemy","pyspark","prefect","datetime"]
+        },
         parameters={
             "tables": [
                 'transaksi_detail',
