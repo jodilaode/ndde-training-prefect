@@ -45,17 +45,8 @@ def main_flow(tables: list):
     load_to_datamart(wait_for=sync_results)
 
 if __name__ == "__main__":
-    main_flow.from_source(
-        # GANTI DENGAN URL REPO ANDA
-        source="https://github.com/jodilaode/ndde-training-prefect.git", 
-        entrypoint="etl_flow_jo.py:main_flow"
-    ).deploy(
-        name="training-ndde-deployment",
-        work_pool_name="training-ndde",
-        job_variables={
-            "pip_install": ["pandas", "sqlalchemy", "pyspark"]
-        },
-        parameters={
-            "tables": ['transaksi_detail','transaksi_header','produk','pelanggan','kategori']
-        }
-    )
+    # Cukup jalankan flow secara lokal untuk test
+    # main_flow(tables=['produk'])
+    
+    # Untuk deploy, kita akan pakai CLI saja sekarang supaya lebih stabil
+    print("Gunakan command 'prefect deploy' di terminal untuk mendaftar.")
