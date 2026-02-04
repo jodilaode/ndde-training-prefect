@@ -28,7 +28,7 @@ from urllib.parse import quote_plus
 # Config and create engine MySQL
 user = 'cbi'
 password = quote_plus('Cbi123!@#')
-host = '172.17.0.1'
+host = '103.93.236.91'
 port = '3306'
 db = 'ecommerce_dummy'
 
