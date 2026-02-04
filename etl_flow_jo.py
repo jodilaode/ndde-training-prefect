@@ -211,7 +211,7 @@ if __name__ == "__main__":
         name="training-ndde-deployment",
         work_pool_name="my-managed-pool", # Managed pool (Prefect Cloud)
         job_variables={
-            "pip_packages": ["pandas", "sqlalchemy", "pyspark"]
+            "pip_packages": ["pandas", "sqlalchemy", "pyspark","pymysql"]
         },
         parameters={
             "tables": [
